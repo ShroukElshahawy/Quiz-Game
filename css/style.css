@@ -1,0 +1,123 @@
+:root {
+   --animate-duration: .6s;
+   --animate-delay: 0.3s;
+}
+.particles-js-canvas-el {
+   height: 100vh !important;
+}
+#inCorrect,#correct {
+   font-size: .65rem;
+}
+main {
+   display: block;
+   background-color: #201920;
+   min-height: 100vh;
+   width: 100%;
+   overflow-y: auto;
+   line-height: 0;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background-color: #201920;
+}
+
+h1 {
+   color: transparent;
+   background: linear-gradient(180deg,#08203e 60%,#557c93 60%) no-repeat;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   background-clip: text;
+   -webkit-text-stroke: 1px #fff;
+   background-size: 100% 180%;
+   
+   animation: gradient 5s infinite alternate;
+}
+@keyframes gradient {
+   0%{
+      transform: rotate(0);
+      background-position-y: 0 ;
+   }
+   50% {
+      transform: rotate(7deg);
+      background-position-y: 100% ;
+   }
+   100%{
+      transform: rotate(-7deg);
+      background-position-y: 0 ;
+   }
+}
+section {
+   color: #fff;
+   backdrop-filter: blur(2px);
+   background-color: rgb(100 100 100 / 0.1) !important;
+}
+
+/* From uiverse.io by @adamgiebl */
+button {
+   font-family: inherit;
+   font-size: 20px;
+   background: #201920;
+   color: white;
+   padding: 0.4em 1em;
+   padding-left: 0.9em;
+   display: flex;
+   align-items: center;
+   border: none;
+   border-radius: 16px;
+   overflow: hidden;
+   transition: all 0.2s;
+}
+
+button span {
+   display: block;
+   margin-left: 0.3em;
+   transition: all 0.3s ease-in-out;
+}
+
+button svg {
+   display: block;
+   transform-origin: center center;
+   transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+   animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+   transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+   transform: translateX(6em);
+}
+
+button:active {
+   transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+   from {
+      transform: translateY(0.1em);
+   }
+
+   to {
+      transform: translateY(-0.1em);
+   }
+}
+
+input,
+input:focus,
+select {
+   background-color: #666262 !important;
+   color: #fff !important;
+   border: unset !important;
+   box-shadow: unset !important;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+   appearance: none;
+}
